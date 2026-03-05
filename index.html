@@ -13,15 +13,10 @@
             --color-text-secondary: #5A5A5A;
             --color-accent: #C84B31;
             --color-border: #E8E6E1;
-            --color-card: #FFFFFF;
             --color-highlight: #FFF8F5;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -39,153 +34,38 @@
             text-align: center;
         }
 
-        .header-logo {
-            font-size: 0.85rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            opacity: 0.6;
-            margin-bottom: 0.75rem;
-            font-weight: 500;
-        }
+        .header-logo { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.75rem; font-weight: 500; }
+        .header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem; }
+        .header .updated { font-size: 0.85rem; opacity: 0.5; }
 
-        .header h1 {
-            font-family: 'DM Serif Display', Georgia, serif;
-            font-size: 2.2rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
+        .lang-switcher { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; }
+        .lang-btn { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; transition: all 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.2); }
+        .lang-btn.active { background: var(--color-accent); border-color: var(--color-accent); }
 
-        .header .updated {
-            font-size: 0.85rem;
-            opacity: 0.5;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 2.5rem 1.5rem 4rem;
-        }
-
-        .intro {
-            font-size: 1.05rem;
-            color: var(--color-text-secondary);
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .section {
-            margin-bottom: 2.25rem;
-        }
-
-        .section-number {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            color: var(--color-accent);
-            background: var(--color-highlight);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
-        }
-
-        .section h2 {
-            font-family: 'DM Serif Display', Georgia, serif;
-            font-size: 1.35rem;
-            font-weight: 400;
-            margin-bottom: 0.75rem;
-            color: var(--color-text);
-        }
-
-        .section p {
-            color: var(--color-text-secondary);
-            margin-bottom: 0.75rem;
-        }
-
-        .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.75rem 0;
-        }
-
-        .section ul li {
-            position: relative;
-            padding-left: 1.25rem;
-            color: var(--color-text-secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        .section ul li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.65rem;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--color-accent);
-            opacity: 0.5;
-        }
-
-        .section a {
-            color: var(--color-accent);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
-        }
-
-        .section a:hover {
-            border-bottom-color: var(--color-accent);
-        }
-
-        .highlight-box {
-            background: var(--color-highlight);
-            border-left: 3px solid var(--color-accent);
-            padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1rem 0;
-        }
-
-        .highlight-box p {
-            color: var(--color-text);
-            font-size: 0.95rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            border-top: 1px solid var(--color-border);
-            margin-top: 1rem;
-        }
-
-        .footer p {
-            font-size: 0.8rem;
-            color: var(--color-text-secondary);
-            opacity: 0.6;
-        }
-
-        .footer .email {
-            display: inline-block;
-            margin-top: 0.5rem;
-            color: var(--color-accent);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+        .intro { font-size: 1.05rem; color: var(--color-text-secondary); margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border); }
+        .section { margin-bottom: 2.25rem; }
+        .section-number { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--color-accent); background: var(--color-highlight); padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem; }
+        .section h2 { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.35rem; font-weight: 400; margin-bottom: 0.75rem; }
+        .section p { color: var(--color-text-secondary); margin-bottom: 0.75rem; }
+        .section ul { list-style: none; padding: 0; margin: 0.75rem 0; }
+        .section ul li { position: relative; padding-left: 1.25rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+        .section ul li::before { content: ""; position: absolute; left: 0; top: 0.65rem; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); opacity: 0.5; }
+        .section a { color: var(--color-accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+        .section a:hover { border-bottom-color: var(--color-accent); }
+        .highlight-box { background: var(--color-highlight); border-left: 3px solid var(--color-accent); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+        .highlight-box p { color: var(--color-text); font-size: 0.95rem; }
+        .footer { text-align: center; padding: 2rem 1.5rem; border-top: 1px solid var(--color-border); margin-top: 1rem; }
+        .footer p { font-size: 0.8rem; color: var(--color-text-secondary); opacity: 0.6; }
+        .footer .email { display: inline-block; margin-top: 0.5rem; color: var(--color-accent); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
 
         @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.75rem;
-            }
-
-            .container {
-                padding: 2rem 1.25rem 3rem;
-            }
-
-            .section h2 {
-                font-size: 1.2rem;
-            }
+            .header h1 { font-size: 1.75rem; }
+            .container { padding: 2rem 1.25rem 3rem; }
+            .section h2 { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -194,14 +74,16 @@
 <div class="header">
     <div class="header-logo">Italia2Canada</div>
     <h1>Privacy Policy</h1>
-    <p class="updated">Ultimo aggiornamento: marzo 2026</p>
+    <p class="updated" id="updated-label">Ultimo aggiornamento: marzo 2026</p>
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('it')">Italiano</button>
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
 </div>
 
-<div class="container">
-
-    <p class="intro">
-        La presente Privacy Policy descrive come l'applicazione "Italia2Canada", sviluppata da Pietro Trentini, raccoglie, utilizza e protegge le informazioni degli utenti.
-    </p>
+<!-- ITALIANO -->
+<div class="container lang-content active" id="lang-it">
+    <p class="intro">La presente Privacy Policy descrive come l'applicazione "Italia2Canada", sviluppata da Pietro Trentini (di seguito "lo Sviluppatore"), raccoglie, utilizza e protegge le informazioni degli utenti.</p>
 
     <div class="section">
         <span class="section-number">SEZIONE 1</span>
@@ -213,7 +95,7 @@
             <li><strong>Provincia di destinazione in Canada:</strong> utilizzata per fornire informazioni personalizzate sulla provincia scelta.</li>
             <li><strong>Date relative al percorso IEC:</strong> date di partenza, ricezione invito e altre scadenze inserite dall'utente per il calcolo delle deadline.</li>
             <li><strong>Preferenze dell'App:</strong> stato della checklist, impostazioni di notifica e preferenze di visualizzazione.</li>
-            <li><strong>Foto dei documenti:</strong> l'utente può facoltativamente allegare foto dei propri documenti tramite la funzione "Foto Documento" (funzionalità Premium). Le foto vengono salvate esclusivamente sul dispositivo dell'utente.</li>
+            <li><strong>Foto e scansioni dei documenti:</strong> l'utente pu&ograve; facoltativamente allegare foto dei propri documenti tramite la funzione "Foto Documento" o scansionarli tramite la fotocamera del dispositivo (funzionalit&agrave; Premium). Le immagini vengono salvate esclusivamente sul dispositivo dell'utente.</li>
         </ul>
         <div class="highlight-box">
             <p>Tutti questi dati sono memorizzati esclusivamente sul dispositivo dell'utente tramite UserDefaults e il file system locale, e non vengono trasmessi a server esterni dello Sviluppatore.</p>
@@ -240,38 +122,46 @@
         <ul>
             <li><strong>Apple StoreKit:</strong> per la gestione degli acquisti in-app. I dati delle transazioni sono gestiti direttamente da Apple secondo la sua <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</li>
             <li><strong>Frankfurter API</strong> (api.frankfurter.app): per ottenere il tasso di cambio EUR/CAD aggiornato dalla BCE. Non vengono trasmessi dati personali dell'utente.</li>
-            <li><strong>Siti web governativi canadesi</strong> (canada.ca): l'App recupera dati pubblici relativi al programma IEC. La navigazione su tali siti è soggetta alle rispettive privacy policy.</li>
+            <li><strong>IRCC</strong> (ircc.canada.ca): l'App recupera dati pubblici relativi al programma IEC (stato dei pool, inviti emessi, posti disponibili) tramite feed XML ufficiali. Non vengono trasmessi dati personali dell'utente.</li>
+            <li><strong>Feed di notizie sull'immigrazione:</strong> l'App recupera articoli da feed RSS pubblici di terze parti, tra cui CIC News (cicnews.com), Moving2Canada (moving2canada.com) e Immigration.ca (immigration.ca), oltre al feed ufficiale IRCC. Nessun dato personale dell'utente viene trasmesso a questi servizi.</li>
+            <li>L'App pu&ograve; inoltre aprire link a siti web informativi governativi e istituzionali. La navigazione su tali siti &egrave; soggetta alle rispettive privacy policy.</li>
         </ul>
     </div>
 
     <div class="section">
         <span class="section-number">SEZIONE 4</span>
         <h2>Notifiche</h2>
-        <p>L'App può richiedere il permesso di inviare notifiche locali per ricordare scadenze e step del percorso IEC. Le notifiche sono generate e gestite localmente sul dispositivo e non richiedono l'invio di dati a server esterni.</p>
+        <p>L'App pu&ograve; richiedere il permesso di inviare notifiche locali per ricordare scadenze e step del percorso IEC. Le notifiche sono generate e gestite localmente sul dispositivo e non richiedono l'invio di dati a server esterni.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SEZIONE 5</span>
         <h2>Calendario</h2>
-        <p>L'App può richiedere l'accesso al calendario del dispositivo per aggiungere eventi relativi alle scadenze del percorso IEC. L'accesso al calendario è facoltativo e viene richiesto solo quando l'utente sceglie di aggiungere un evento.</p>
+        <p>L'App pu&ograve; richiedere l'accesso al calendario del dispositivo per aggiungere eventi relativi alle scadenze del percorso IEC. L'accesso al calendario &egrave; facoltativo e viene richiesto solo quando l'utente sceglie di aggiungere un evento.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SEZIONE 6</span>
-        <h2>Libreria Foto</h2>
-        <p>L'App può richiedere l'accesso alla libreria foto del dispositivo per consentire all'utente di allegare foto dei propri documenti. L'accesso è facoltativo e viene richiesto solo quando l'utente sceglie di allegare una foto. Le immagini selezionate vengono salvate localmente sul dispositivo e non vengono trasmesse a server esterni.</p>
+        <h2>Fotocamera e Libreria Foto</h2>
+        <p>L'App pu&ograve; richiedere l'accesso alla fotocamera del dispositivo per consentire la scansione dei documenti e alla libreria foto per allegare foto dei propri documenti. L'accesso &egrave; facoltativo e viene richiesto solo quando l'utente utilizza le relative funzionalit&agrave;. Le immagini acquisite o selezionate vengono salvate localmente sul dispositivo e non vengono trasmesse a server esterni.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SEZIONE 7</span>
+        <h2>Condivisione e Stampa</h2>
+        <p>L'App consente all'utente di condividere o stampare i propri documenti scansionati tramite le funzionalit&agrave; native di iOS. I dati condivisi o stampati vengono gestiti direttamente dal sistema operativo e dalle applicazioni scelte dall'utente. Lo Sviluppatore non ha accesso ai dati condivisi o stampati.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SEZIONE 8</span>
         <h2>Sicurezza dei dati</h2>
         <p>Tutti i dati dell'utente sono memorizzati localmente sul dispositivo e protetti dai meccanismi di sicurezza del sistema operativo iOS. Lo Sviluppatore non ha accesso ai dati memorizzati sui dispositivi degli utenti.</p>
     </div>
 
     <div class="section">
-        <span class="section-number">SEZIONE 8</span>
+        <span class="section-number">SEZIONE 9</span>
         <h2>Diritti dell'utente</h2>
-        <p>L'utente può in qualsiasi momento:</p>
+        <p>L'utente pu&ograve; in qualsiasi momento:</p>
         <ul>
             <li>Visualizzare e modificare i propri dati tramite la sezione Impostazioni dell'App.</li>
             <li>Cancellare tutti i dati utilizzando la funzione "Ripristina app" nelle Impostazioni.</li>
@@ -280,34 +170,165 @@
     </div>
 
     <div class="section">
-        <span class="section-number">SEZIONE 9</span>
+        <span class="section-number">SEZIONE 10</span>
         <h2>Modifiche alla Privacy Policy</h2>
         <p>Lo Sviluppatore si riserva il diritto di aggiornare la presente Privacy Policy. Le modifiche saranno rese disponibili tramite aggiornamento dell'App. L'utilizzo continuato dell'App dopo le modifiche costituisce accettazione della nuova Privacy Policy.</p>
     </div>
 
     <div class="section">
-        <span class="section-number">SEZIONE 10</span>
+        <span class="section-number">SEZIONE 11</span>
         <h2>Contatti</h2>
-        <p>Per domande o richieste relative alla privacy, è possibile contattare lo Sviluppatore all'indirizzo email: <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a></p>
+        <p>Per domande o richieste relative alla privacy, &egrave; possibile contattare lo Sviluppatore all'indirizzo email: <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a></p>
     </div>
 
     <div class="section">
-        <span class="section-number">SEZIONE 11</span>
-        <h2>Conformità GDPR</h2>
-        <p>In conformità al Regolamento Generale sulla Protezione dei Dati (GDPR — Regolamento UE 2016/679), si precisa che:</p>
+        <span class="section-number">SEZIONE 12</span>
+        <h2>Conformit&agrave; GDPR</h2>
+        <p>In conformit&agrave; al Regolamento Generale sulla Protezione dei Dati (GDPR &mdash; Regolamento UE 2016/679), si precisa che:</p>
         <ul>
-            <li>La base giuridica del trattamento è il consenso dell'utente, espresso tramite l'utilizzo dell'App.</li>
+            <li>La base giuridica del trattamento &egrave; il consenso dell'utente, espresso tramite l'utilizzo dell'App.</li>
             <li>I dati non vengono trasferiti al di fuori del dispositivo dell'utente.</li>
-            <li>L'utente ha diritto di accesso, rettifica e cancellazione dei propri dati, esercitabili tramite le funzionalità dell'App o contattando lo Sviluppatore.</li>
+            <li>L'utente ha diritto di accesso, rettifica e cancellazione dei propri dati, esercitabili tramite le funzionalit&agrave; dell'App o contattando lo Sviluppatore.</li>
         </ul>
     </div>
 
     <div class="footer">
-        <p>Italia2Canada — © 2026 Pietro Trentini</p>
+        <p>Italia2Canada &mdash; &copy; 2026 Pietro Trentini</p>
         <a href="mailto:pietrotrentini.dev@gmail.com" class="email">pietrotrentini.dev@gmail.com</a>
     </div>
-
 </div>
+
+<!-- ENGLISH -->
+<div class="container lang-content" id="lang-en">
+    <p class="intro">This Privacy Policy describes how the application "Italia2Canada", developed by Pietro Trentini (hereinafter "the Developer"), collects, uses and protects users' information.</p>
+
+    <div class="section">
+        <span class="section-number">SECTION 1</span>
+        <h2>Information Collected</h2>
+        <p>The App collects and stores the following information locally on the user's device:</p>
+        <ul>
+            <li><strong>Name:</strong> used to personalize greetings and the in-app experience.</li>
+            <li><strong>Gender:</strong> used to personalize app messages.</li>
+            <li><strong>Destination province in Canada:</strong> used to provide personalized information about the chosen province.</li>
+            <li><strong>IEC-related dates:</strong> departure dates, invitation receipt dates and other deadlines entered by the user for deadline calculations.</li>
+            <li><strong>App preferences:</strong> checklist status, notification settings and display preferences.</li>
+            <li><strong>Document photos and scans:</strong> the user may optionally attach photos of their documents via the "Document Photo" feature or scan them using the device's camera (Premium feature). Images are saved exclusively on the user's device.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>All data is stored exclusively on the user's device via UserDefaults and the local file system, and is not transmitted to any external servers controlled by the Developer.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 2</span>
+        <h2>Data Not Collected</h2>
+        <p>The App does NOT collect:</p>
+        <ul>
+            <li>Location data</li>
+            <li>Contacts from the address book</li>
+            <li>Advertising identifiers</li>
+            <li>Web browsing data</li>
+            <li>Financial or banking information</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 3</span>
+        <h2>Third-Party Services</h2>
+        <p>The App uses the following third-party services:</p>
+        <ul>
+            <li><strong>Apple StoreKit:</strong> for managing in-app purchases. Transaction data is handled directly by Apple in accordance with its <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+            <li><strong>Frankfurter API</strong> (api.frankfurter.app): to obtain the EUR/CAD exchange rate updated by the ECB. No personal user data is transmitted.</li>
+            <li><strong>IRCC</strong> (ircc.canada.ca): the App retrieves public data related to the IEC program (pool status, invitations issued, available spots) via official XML feeds. No personal user data is transmitted.</li>
+            <li><strong>Immigration news feeds:</strong> the App retrieves articles from public third-party RSS feeds, including CIC News (cicnews.com), Moving2Canada (moving2canada.com) and Immigration.ca (immigration.ca), as well as the official IRCC feed. No personal user data is transmitted to these services.</li>
+            <li>The App may also open links to government and institutional informational websites. Browsing on these sites is subject to their respective privacy policies.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 4</span>
+        <h2>Notifications</h2>
+        <p>The App may request permission to send local notifications to remind users of IEC deadlines and steps. Notifications are generated and managed locally on the device and do not require sending data to external servers.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 5</span>
+        <h2>Calendar</h2>
+        <p>The App may request access to the device's calendar to add events related to IEC deadlines. Calendar access is optional and is only requested when the user chooses to add an event.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 6</span>
+        <h2>Camera and Photo Library</h2>
+        <p>The App may request access to the device's camera for document scanning and to the photo library for attaching document photos. Access is optional and is only requested when the user uses these features. Captured or selected images are saved locally on the device and are not transmitted to external servers.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 7</span>
+        <h2>Sharing and Printing</h2>
+        <p>The App allows users to share or print their scanned documents through native iOS features. Shared or printed data is managed directly by the operating system and the applications chosen by the user. The Developer has no access to shared or printed data.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 8</span>
+        <h2>Data Security</h2>
+        <p>All user data is stored locally on the device and protected by the security mechanisms of the iOS operating system. The Developer has no access to data stored on users' devices.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 9</span>
+        <h2>User Rights</h2>
+        <p>The user may at any time:</p>
+        <ul>
+            <li>View and edit their data through the App's Settings section.</li>
+            <li>Delete all data using the "Reset App" function in Settings.</li>
+            <li>Uninstall the App, which will result in the deletion of all associated data.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 10</span>
+        <h2>Changes to This Privacy Policy</h2>
+        <p>The Developer reserves the right to update this Privacy Policy. Changes will be made available through App updates. Continued use of the App after changes constitutes acceptance of the new Privacy Policy.</p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 11</span>
+        <h2>Contact</h2>
+        <p>For questions or requests regarding privacy, the Developer can be contacted at: <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a></p>
+    </div>
+
+    <div class="section">
+        <span class="section-number">SECTION 12</span>
+        <h2>GDPR Compliance</h2>
+        <p>In compliance with the General Data Protection Regulation (GDPR &mdash; EU Regulation 2016/679), the following is specified:</p>
+        <ul>
+            <li>The legal basis for data processing is user consent, expressed through use of the App.</li>
+            <li>Data is not transferred outside the user's device.</li>
+            <li>The user has the right to access, rectify and delete their data, exercisable through the App's features or by contacting the Developer.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Italia2Canada &mdash; &copy; 2026 Pietro Trentini</p>
+        <a href="mailto:pietrotrentini.dev@gmail.com" class="email">pietrotrentini.dev@gmail.com</a>
+    </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        document.querySelectorAll('.lang-btn').forEach(function(el) { el.classList.remove('active'); });
+        document.getElementById('lang-' + lang).classList.add('active');
+        var buttons = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].textContent.trim() === (lang === 'it' ? 'Italiano' : 'English')) {
+                buttons[i].classList.add('active');
+            }
+        }
+        document.getElementById('updated-label').textContent = lang === 'it' ? 'Ultimo aggiornamento: marzo 2026' : 'Last updated: March 2026';
+    }
+</script>
 
 </body>
 </html>
