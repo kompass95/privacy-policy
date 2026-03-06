@@ -94,6 +94,7 @@
             <li><strong>Genere:</strong> utilizzato per personalizzare i messaggi dell'App.</li>
             <li><strong>Provincia di destinazione in Canada:</strong> utilizzata per fornire informazioni personalizzate sulla provincia scelta.</li>
             <li><strong>Date relative al percorso IEC:</strong> date di partenza, ricezione invito e altre scadenze inserite dall'utente per il calcolo delle deadline.</li>
+            <li><strong>Codice volo:</strong> inserito facoltativamente dall'utente per il tracciamento del volo verso il Canada (funzionalit&agrave; Premium).</li>
             <li><strong>Preferenze dell'App:</strong> stato della checklist, impostazioni di notifica e preferenze di visualizzazione.</li>
             <li><strong>Foto e scansioni dei documenti:</strong> l'utente pu&ograve; facoltativamente allegare foto dei propri documenti tramite la funzione "Foto Documento" o scansionarli tramite la fotocamera del dispositivo (funzionalit&agrave; Premium). Le immagini vengono salvate esclusivamente sul dispositivo dell'utente.</li>
         </ul>
@@ -124,6 +125,9 @@
             <li><strong>Frankfurter API</strong> (api.frankfurter.app): per ottenere il tasso di cambio EUR/CAD aggiornato dalla BCE. Non vengono trasmessi dati personali dell'utente.</li>
             <li><strong>IRCC</strong> (ircc.canada.ca): l'App recupera dati pubblici relativi al programma IEC (stato dei pool, inviti emessi, posti disponibili) tramite feed XML ufficiali. Non vengono trasmessi dati personali dell'utente.</li>
             <li><strong>Feed di notizie sull'immigrazione:</strong> l'App recupera articoli da feed RSS pubblici di terze parti, tra cui CIC News (cicnews.com), Moving2Canada (moving2canada.com) e Immigration.ca (immigration.ca), oltre al feed ufficiale IRCC. Nessun dato personale dell'utente viene trasmesso a questi servizi.</li>
+            <li><strong>AeroDataBox</strong> (via RapidAPI): per ottenere informazioni in tempo reale sui voli (stato, orari, terminal, gate). Viene trasmesso esclusivamente il codice del volo e la data di partenza inseriti dall'utente. Nessun altro dato personale viene condiviso. Questa funzionalit&agrave; &egrave; disponibile solo per gli utenti Premium.</li>
+            <li><strong>Apple WeatherKit:</strong> per fornire previsioni meteo relative alla citt&agrave; di destinazione del volo. La richiesta include esclusivamente le coordinate geografiche della citt&agrave; (ottenute tramite geocodifica). Nessun dato personale dell'utente viene trasmesso. Questa funzionalit&agrave; &egrave; disponibile solo per gli utenti Premium.</li>
+            <li><strong>Apple MapKit:</strong> per convertire il nome della citt&agrave; di destinazione in coordinate geografiche (geocodifica), necessarie per le previsioni meteo. Viene trasmesso esclusivamente il nome della citt&agrave;. Nessun dato personale dell'utente viene condiviso.</li>
             <li>L'App pu&ograve; inoltre aprire link a siti web informativi governativi e istituzionali. La navigazione su tali siti &egrave; soggetta alle rispettive privacy policy.</li>
         </ul>
     </div>
@@ -200,22 +204,23 @@
 
 <!-- ENGLISH -->
 <div class="container lang-content" id="lang-en">
-    <p class="intro">This Privacy Policy describes how the application "Italia2Canada", developed by Pietro Trentini (hereinafter "the Developer"), collects, uses and protects users' information.</p>
+    <p class="intro">This Privacy Policy describes how the application "Italia2Canada", developed by Pietro Trentini (hereinafter "the Developer"), collects, uses and protects user information.</p>
 
     <div class="section">
         <span class="section-number">SECTION 1</span>
         <h2>Information Collected</h2>
-        <p>The App collects and stores the following information locally on the user's device:</p>
+        <p>The App collects and stores locally on the user's device the following information:</p>
         <ul>
-            <li><strong>Name:</strong> used to personalize greetings and the in-app experience.</li>
-            <li><strong>Gender:</strong> used to personalize app messages.</li>
+            <li><strong>Name:</strong> used to personalize greetings and the App experience.</li>
+            <li><strong>Gender:</strong> used to personalize the App's messages.</li>
             <li><strong>Destination province in Canada:</strong> used to provide personalized information about the chosen province.</li>
-            <li><strong>IEC-related dates:</strong> departure dates, invitation receipt dates and other deadlines entered by the user for deadline calculations.</li>
+            <li><strong>IEC journey dates:</strong> departure dates, invitation receipt dates and other deadlines entered by the user for deadline calculations.</li>
+            <li><strong>Flight code:</strong> optionally entered by the user for flight tracking to Canada (Premium feature).</li>
             <li><strong>App preferences:</strong> checklist status, notification settings and display preferences.</li>
-            <li><strong>Document photos and scans:</strong> the user may optionally attach photos of their documents via the "Document Photo" feature or scan them using the device's camera (Premium feature). Images are saved exclusively on the user's device.</li>
+            <li><strong>Document photos and scans:</strong> the user may optionally attach photos of their documents via the "Document Photo" function or scan them using the device camera (Premium feature). Images are stored exclusively on the user's device.</li>
         </ul>
         <div class="highlight-box">
-            <p>All data is stored exclusively on the user's device via UserDefaults and the local file system, and is not transmitted to any external servers controlled by the Developer.</p>
+            <p>All data is stored exclusively on the user's device via UserDefaults and the local file system, and is not transmitted to the Developer's external servers.</p>
         </div>
     </div>
 
@@ -225,7 +230,7 @@
         <p>The App does NOT collect:</p>
         <ul>
             <li>Location data</li>
-            <li>Contacts from the address book</li>
+            <li>Address book contacts</li>
             <li>Advertising identifiers</li>
             <li>Web browsing data</li>
             <li>Financial or banking information</li>
@@ -237,42 +242,45 @@
         <h2>Third-Party Services</h2>
         <p>The App uses the following third-party services:</p>
         <ul>
-            <li><strong>Apple StoreKit:</strong> for managing in-app purchases. Transaction data is handled directly by Apple in accordance with its <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</li>
-            <li><strong>Frankfurter API</strong> (api.frankfurter.app): to obtain the EUR/CAD exchange rate updated by the ECB. No personal user data is transmitted.</li>
+            <li><strong>Apple StoreKit:</strong> for managing in-app purchases. Transaction data is handled directly by Apple according to its <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+            <li><strong>Frankfurter API</strong> (api.frankfurter.app): to obtain the updated EUR/CAD exchange rate from the ECB. No personal user data is transmitted.</li>
             <li><strong>IRCC</strong> (ircc.canada.ca): the App retrieves public data related to the IEC program (pool status, invitations issued, available spots) via official XML feeds. No personal user data is transmitted.</li>
-            <li><strong>Immigration news feeds:</strong> the App retrieves articles from public third-party RSS feeds, including CIC News (cicnews.com), Moving2Canada (moving2canada.com) and Immigration.ca (immigration.ca), as well as the official IRCC feed. No personal user data is transmitted to these services.</li>
-            <li>The App may also open links to government and institutional informational websites. Browsing on these sites is subject to their respective privacy policies.</li>
+            <li><strong>Immigration news feeds:</strong> the App retrieves articles from public third-party RSS feeds, including CIC News (cicnews.com), Moving2Canada (moving2canada.com) and Immigration.ca (immigration.ca), in addition to the official IRCC news feed. No personal user data is transmitted to these services.</li>
+            <li><strong>AeroDataBox</strong> (via RapidAPI): to obtain real-time flight information (status, times, terminal, gate). Only the flight code and departure date entered by the user are transmitted. No other personal data is shared. This feature is available only to Premium users.</li>
+            <li><strong>Apple WeatherKit:</strong> to provide weather forecasts for the flight's destination city. The request includes only the geographic coordinates of the city (obtained via geocoding). No personal user data is transmitted. This feature is available only to Premium users.</li>
+            <li><strong>Apple MapKit:</strong> to convert the destination city name into geographic coordinates (geocoding), required for weather forecasts. Only the city name is transmitted. No personal user data is shared.</li>
+            <li>The App may also open links to government and institutional informational websites. Browsing such sites is subject to their respective privacy policies.</li>
         </ul>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 4</span>
         <h2>Notifications</h2>
-        <p>The App may request permission to send local notifications to remind users of IEC deadlines and steps. Notifications are generated and managed locally on the device and do not require sending data to external servers.</p>
+        <p>The App may request permission to send local notifications to remind the user of deadlines and IEC steps. Notifications are generated and managed locally on the device and do not require sending data to external servers.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 5</span>
         <h2>Calendar</h2>
-        <p>The App may request access to the device's calendar to add events related to IEC deadlines. Calendar access is optional and is only requested when the user chooses to add an event.</p>
+        <p>The App may request access to the device calendar to add events related to IEC deadlines. Calendar access is optional and is only requested when the user chooses to add an event.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 6</span>
         <h2>Camera and Photo Library</h2>
-        <p>The App may request access to the device's camera for document scanning and to the photo library for attaching document photos. Access is optional and is only requested when the user uses these features. Captured or selected images are saved locally on the device and are not transmitted to external servers.</p>
+        <p>The App may request access to the device camera for document scanning and to the photo library for attaching photos of documents. Access is optional and is only requested when the user uses the respective features. Captured or selected images are stored locally on the device and are not transmitted to external servers.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 7</span>
         <h2>Sharing and Printing</h2>
-        <p>The App allows users to share or print their scanned documents through native iOS features. Shared or printed data is managed directly by the operating system and the applications chosen by the user. The Developer has no access to shared or printed data.</p>
+        <p>The App allows the user to share or print their scanned documents via native iOS features. Shared or printed data is handled directly by the operating system and the applications chosen by the user. The Developer has no access to shared or printed data.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 8</span>
         <h2>Data Security</h2>
-        <p>All user data is stored locally on the device and protected by the security mechanisms of the iOS operating system. The Developer has no access to data stored on users' devices.</p>
+        <p>All user data is stored locally on the device and protected by the iOS operating system's security mechanisms. The Developer has no access to data stored on users' devices.</p>
     </div>
 
     <div class="section">
@@ -281,29 +289,29 @@
         <p>The user may at any time:</p>
         <ul>
             <li>View and edit their data through the App's Settings section.</li>
-            <li>Delete all data using the "Reset App" function in Settings.</li>
-            <li>Uninstall the App, which will result in the deletion of all associated data.</li>
+            <li>Delete all data using the "Reset app" function in Settings.</li>
+            <li>Uninstall the App, which results in the deletion of all associated data.</li>
         </ul>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 10</span>
-        <h2>Changes to This Privacy Policy</h2>
+        <h2>Changes to the Privacy Policy</h2>
         <p>The Developer reserves the right to update this Privacy Policy. Changes will be made available through App updates. Continued use of the App after changes constitutes acceptance of the new Privacy Policy.</p>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 11</span>
         <h2>Contact</h2>
-        <p>For questions or requests regarding privacy, the Developer can be contacted at: <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a></p>
+        <p>For questions or requests regarding privacy, you may contact the Developer at: <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a></p>
     </div>
 
     <div class="section">
         <span class="section-number">SECTION 12</span>
         <h2>GDPR Compliance</h2>
-        <p>In compliance with the General Data Protection Regulation (GDPR &mdash; EU Regulation 2016/679), the following is specified:</p>
+        <p>In accordance with the General Data Protection Regulation (GDPR &mdash; EU Regulation 2016/679), it is specified that:</p>
         <ul>
-            <li>The legal basis for data processing is user consent, expressed through use of the App.</li>
+            <li>The legal basis for data processing is the user's consent, expressed through the use of the App.</li>
             <li>Data is not transferred outside the user's device.</li>
             <li>The user has the right to access, rectify and delete their data, exercisable through the App's features or by contacting the Developer.</li>
         </ul>
