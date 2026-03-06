@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Italia2Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FAFAF8;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5A5A5A;
+            --color-accent: #C84B31;
+            --color-border: #E8E6E1;
+            --color-highlight: #FFF8F5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+            color: white;
+            padding: 3rem 1.5rem 2.5rem;
+            text-align: center;
+        }
+
+        .header-logo { font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.6; margin-bottom: 0.75rem; font-weight: 500; }
+        .header h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem; }
+        .header .subtitle { font-size: 0.95rem; opacity: 0.6; }
+
+        .lang-switcher { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; }
+        .lang-btn { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; transition: all 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.2); }
+        .lang-btn.active { background: var(--color-accent); border-color: var(--color-accent); }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-btn:hover { opacity: 0.85; }
+
+        .faq-section { margin-top: 2rem; }
+
+        .faq-title {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .faq-item p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .faq-item a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .faq-item a:hover { text-decoration: underline; }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-top: 1px solid var(--color-border);
+            margin-top: 2rem;
+        }
+
+        .footer p { font-size: 0.8rem; color: var(--color-text-secondary); opacity: 0.6; }
+        .footer a { color: var(--color-accent); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.75rem; }
+            .container { padding: 2rem 1.25rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-logo">Italia2Canada</div>
+    <h1>Support</h1>
+    <p class="subtitle" id="subtitle-label">Siamo qui per aiutarti</p>
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('it')">Italiano</button>
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+</div>
+
+<!-- ITALIANO -->
+<div class="container lang-content active" id="lang-it">
+
+    <div class="contact-card">
+        <h2>Hai bisogno di aiuto?</h2>
+        <p>Per segnalare un bug, suggerire una funzionalit&agrave; o qualsiasi altra domanda, scrivici. Rispondiamo di solito entro 24 ore.</p>
+        <a href="mailto:pietrotrentini.dev@gmail.com" class="contact-btn">Scrivici una email</a>
+    </div>
+
+    <div class="faq-section">
+        <h2 class="faq-title">Domande frequenti</h2>
+
+        <div class="faq-item">
+            <h3>L'app &egrave; gratuita?</h3>
+            <p>S&igrave;, l'app &egrave; gratuita con funzionalit&agrave; di base. La versione Premium sblocca strumenti avanzati come la scansione documenti, il budget simulator e altro.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>I miei dati sono al sicuro?</h3>
+            <p>Assolutamente s&igrave;. Tutti i dati vengono salvati esclusivamente sul tuo dispositivo e non vengono mai trasmessi a server esterni. Puoi leggere la nostra <a href="index.html">Privacy Policy</a> per maggiori dettagli.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Come faccio a ripristinare l'app?</h3>
+            <p>Vai in Impostazioni dentro l'app e clicca "Ripristina app". Questo canceller&agrave; tutti i tuoi dati e ti permetter&agrave; di ricominciare da zero.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Ho acquistato la versione Premium ma non si attiva</h3>
+            <p>Prova a chiudere completamente l'app e riaprirla. Se il problema persiste, vai in Impostazioni dell'app e cerca l'opzione "Ripristina acquisti". Se non funziona ancora, scrivici.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Le informazioni nella checklist sono aggiornate?</h3>
+            <p>Facciamo del nostro meglio per mantenere tutte le informazioni aggiornate. Tuttavia, ti consigliamo sempre di verificare le informazioni ufficiali sul sito IRCC. L'app &egrave; una guida, non sostituisce le fonti ufficiali.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Posso usare l'app offline?</h3>
+            <p>S&igrave;, la checklist e gli strumenti funzionano offline. Il feed notizie, le statistiche pool IEC e il convertitore valuta richiedono una connessione internet per aggiornarsi.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Come posso suggerire una nuova funzionalit&agrave;?</h3>
+            <p>Ci piacerebbe sentire le tue idee! Scrivici a <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a> con il tuo suggerimento.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Italia2Canada &mdash; &copy; 2026 Pietro Trentini</p>
+        <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a>
+    </div>
+</div>
+
+<!-- ENGLISH -->
+<div class="container lang-content" id="lang-en">
+
+    <div class="contact-card">
+        <h2>Need help?</h2>
+        <p>To report a bug, suggest a feature or for any other question, get in touch. We usually respond within 24 hours.</p>
+        <a href="mailto:pietrotrentini.dev@gmail.com" class="contact-btn">Send us an email</a>
+    </div>
+
+    <div class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Is the app free?</h3>
+            <p>Yes, the app is free with basic features. The Premium version unlocks advanced tools like document scanning, budget simulator and more.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is my data safe?</h3>
+            <p>Absolutely. All data is stored exclusively on your device and is never transmitted to external servers. You can read our <a href="index.html">Privacy Policy</a> for more details.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I reset the app?</h3>
+            <p>Go to Settings within the app and tap "Reset App". This will delete all your data and allow you to start fresh.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>I purchased Premium but it won't activate</h3>
+            <p>Try closing the app completely and reopening it. If the issue persists, go to the app's Settings and look for "Restore Purchases". If it still doesn't work, contact us.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is the checklist information up to date?</h3>
+            <p>We do our best to keep all information current. However, we always recommend verifying official information on the IRCC website. The app is a guide and does not replace official sources.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I use the app offline?</h3>
+            <p>Yes, the checklist and tools work offline. The news feed, IEC pool statistics and currency converter require an internet connection to update.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How can I suggest a new feature?</h3>
+            <p>We'd love to hear your ideas! Write to us at <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a> with your suggestion.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Italia2Canada &mdash; &copy; 2026 Pietro Trentini</p>
+        <a href="mailto:pietrotrentini.dev@gmail.com">pietrotrentini.dev@gmail.com</a>
+    </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        document.querySelectorAll('.lang-btn').forEach(function(el) { el.classList.remove('active'); });
+        document.getElementById('lang-' + lang).classList.add('active');
+        var buttons = document.querySelectorAll('.lang-btn');
+        for (var i = 0; i < buttons.length; i++) {
+            if (buttons[i].textContent.trim() === (lang === 'it' ? 'Italiano' : 'English')) {
+                buttons[i].classList.add('active');
+            }
+        }
+        document.getElementById('subtitle-label').textContent = lang === 'it' ? 'Siamo qui per aiutarti' : 'We\'re here to help';
+    }
+</script>
+
+</body>
+</html>
